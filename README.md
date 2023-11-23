@@ -35,7 +35,7 @@ console.log(helperray.shortestIn(names)); // return 'Tim'
 -example 2 :
 ```javascript
 import helperray from 'helperray';
-const { range } = helperray;
+const { range, average, sum, concatAll } = helperray;
 
 const number = range(0,9);
 console.log(number) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
