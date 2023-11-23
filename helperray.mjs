@@ -100,12 +100,13 @@ function howMany(array, target) {
 }
 function range(from, to, step = 1) {
   let array = [];
-  if(step > 0) {
-    for(let i = from; i <= (to < 0 ? -to : to); i += step) {
+  step = step < 0 ? -step : step;
+  if(to > from) {
+    for(let i = from; i <= to; i += step) {
       array.push(i);
     }
-  } else if (step < 0) {
-    for(let i = from; i >= (to < 0 ? to : -to); i += step) {
+  } else if (to < from) {
+    for(let i = from; i >= to; i -= step) {
       array.push(i);
     }
   } else {

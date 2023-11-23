@@ -22,7 +22,7 @@ Install helperray with npm
 import helperray from 'helperray';
 ```
 
--example :
+-example 1 :
 ```javascript
 import helperray from 'helperray';
 
@@ -32,6 +32,21 @@ console.log(helperray.longestIn(names)); // return 'Gordon'
 console.log(helperray.shortestIn(names)); // return 'Tim'
 ```
 
+-example 2 :
+```javascript
+import helperray from 'helperray';
+const { range } = helperray;
+
+const number = range(0,9);
+console.log(number) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+console.log(average(number)); //4.5
+console.log(sum(number)); //45
+shuffle(number);
+console.log(concatAll(number, ' - '));
+// print a random number like this
+// '5 - 8 - 3 - 7 - 6 - 4 - 2 - 9 - 0 - 1'
+```
 
 ## Functions
 
