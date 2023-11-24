@@ -252,6 +252,49 @@ current :
 [ 7 ]
 
 ```
+-example 6 
+```javascript
+import helperray from 'helperray';
+const { printTable, makeTableStyle } = helperray;
+
+const persons = [
+  {name: 'Jhony', age: 25},
+  {name: 'Tommy', age: 32},
+  {name: 'Selma', age: 27},
+  {name: 'Bruce', age: 29},
+  {name: 'Penny', age: 34}
+];
+
+const myStyle = {
+  h: '1', v: '2', tl: '3', t: '4',
+  tr: '5', l: '6', m: '7', r: '8',
+  bl: '9', b: '0', br: 'a'
+}
+const myStyle2 = makeTableStyle('@');
+printTable(persons, myStyle);
+printTable(persons, myStyle2);
+```
+-- output
+```bash 
+31111111141111115
+2 name   2 age  2
+61111111171111118
+2 Jhony  2 25   2
+2 Tommy  2 32   2
+2 Selma  2 27   2
+2 Bruce  2 29   2
+2 Penny  2 34   2
+9111111110111111a
+@@@@@@@@@@@@@@@@@
+@ name   @ age  @
+@@@@@@@@@@@@@@@@@
+@ Jhony  @ 25   @
+@ Tommy  @ 32   @
+@ Selma  @ 27   @
+@ Bruce  @ 29   @
+@ Penny  @ 34   @
+@@@@@@@@@@@@@@@@@
+```
 
 ## Functions
 
@@ -278,7 +321,7 @@ current :
 | `setAllTo()` | `array:any[], to:any` |  | set all valuenin array to value of "to" param |
 | `printTable()` | `array:object[], tableStyle?:object=defaultStyle` |  | print table into terminal |
 | `createTable()` | `structure:any[]` | `Table` | create table structure and return the instance of class Table |
-| `createTableStyle()` | `char:string[]` | `object` | create a table style with same component for use in `printTable()` |
+| `makeTableStyle()` | `char:string[]` | `object` | create a table style with same component for use in `printTable()` |
 | `createTimeTraverray()` | `array:any[], limit?:number=5` | `TimeTraverray` | create a TimeTraverray instance |
 
 ## Consts
