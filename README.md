@@ -50,7 +50,7 @@ console.log(concatAll(number, ' - '));
 
 -example 3 
 ```javascript
-import helperray from './helperray.mjs';
+import helperray from 'helperray';
 const { printTable, tableStyles } = helperray;
 
 const persons = [
@@ -87,7 +87,7 @@ printable(persons, tableStyles.blank);
 
 -example 4
 ```javascript
-import helperray from './helperray.mjs';
+import helperray from 'helperray';
 const { printTable, createTable } = helperray;
 
 const users = createTable([
@@ -157,7 +157,7 @@ printTable(users.selectAll());
 ```
 -example 5 
 ```javascript
-import helperray from './helperray.mjs';
+import helperray from 'helperray';
 const { createTimeTraverray, joins } = helperray;
 
 const number = createTimeTraverray([1, 2, 3, 4, 5], 5);
